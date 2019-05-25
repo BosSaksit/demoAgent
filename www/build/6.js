@@ -27,7 +27,7 @@ var InfoListPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__info_list__["a" /* InfoListPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__info_list__["a" /* InfoListPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__info_list__["a" /* InfoListPage */]),
             ],
         })
     ], InfoListPageModule);
@@ -72,9 +72,9 @@ var InfoListPage = /** @class */ (function () {
     };
     InfoListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-info-list',template:/*ion-inline-start:"F:\workthes\demoAgent\src\pages\info-list\info-list.html"*/'<!--\n  Generated template for the InfoListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>infoList</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"F:\workthes\demoAgent\src\pages\info-list\info-list.html"*/,
+            selector: 'page-info-list',template:/*ion-inline-start:"D:\demoAgent\src\pages\info-list\info-list.html"*/'<!--\n\n  Generated template for the InfoListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>infoList</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\demoAgent\src\pages\info-list\info-list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], InfoListPage);
     return InfoListPage;
 }());

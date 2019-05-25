@@ -27,7 +27,7 @@ var ListPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__list__["a" /* ListPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__list__["a" /* ListPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__list__["a" /* ListPage */]),
             ],
         })
     ], ListPageModule);
@@ -72,9 +72,9 @@ var ListPage = /** @class */ (function () {
     };
     ListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"F:\workthes\demoAgent\src\pages\list\list.html"*/'<!--\n\n  Generated template for the ListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>list</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <h2>รายการสั่งซื้อ</h2>\n\n  <ion-row>\n\n    <ion-col>\n\n      <ion-label>ลำดับ</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>ชื่อลูกค้า</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>จำนวน</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>ยอดซื้อ</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>ข้อมูล</ion-label>\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row>\n\n      <ion-col>\n\n        <ion-label>1</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <ion-label>xxxxxxxxxxx</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <ion-label>20</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <ion-label>3000000</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <button ion-button small>\n\n          <ion-icon name="md-open"></ion-icon>\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n</ion-content>'/*ion-inline-end:"F:\workthes\demoAgent\src\pages\list\list.html"*/,
+            selector: 'page-list',template:/*ion-inline-start:"D:\demoAgent\src\pages\list\list.html"*/'<!--\n\n  Generated template for the ListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>list</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <h2>รายการสั่งซื้อ</h2>\n\n  <ion-row>\n\n    <ion-col>\n\n      <ion-label>ลำดับ</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>ชื่อลูกค้า</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>จำนวน</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>ยอดซื้อ</ion-label>\n\n    </ion-col>\n\n    <ion-col>\n\n      <ion-label>ข้อมูล</ion-label>\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row>\n\n      <ion-col>\n\n        <ion-label>1</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <ion-label>xxxxxxxxxxx</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <ion-label>20</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <ion-label>3000000</ion-label>\n\n      </ion-col>\n\n      <ion-col>\n\n        <button ion-button small>\n\n          <ion-icon name="md-open"></ion-icon>\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n</ion-content>'/*ion-inline-end:"D:\demoAgent\src\pages\list\list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], ListPage);
     return ListPage;
 }());

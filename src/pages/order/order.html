@@ -12,23 +12,10 @@
 
 <ion-content padding text-center>
   <h2>สั่งซื้อสินค้า</h2>
-  <ion-item>
-    <ion-label floating>ชื่อลูกค้า</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>เบอร์โทรลูกค้า</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-      <ion-label floating>ที่อยู่ลูกค้า</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-  <ion-item>
-    <ion-label floating>จำนวนสินค้า</ion-label>
-    <ion-input type="number"></ion-input>
-  </ion-item>
-  <br><br>
-  <button ion-button block round>Done</button>
-
+  <ion-card [(ngModel)]="name" (click)="order(name)">
+     <img width="20%" src="../../assets/imgs/lip_tint_matte.jpg">
+  </ion-card>
+  <ion-card [(ngModel)]="name2" (click)="order(name2)">
+      <img width="20%" src="../../assets/imgs/cream.jpg">
+   </ion-card>
 </ion-content>

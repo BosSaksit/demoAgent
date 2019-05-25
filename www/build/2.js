@@ -27,7 +27,7 @@ var OrderPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__order__["a" /* OrderPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__order__["a" /* OrderPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__order__["a" /* OrderPage */]),
             ],
         })
     ], OrderPageModule);
@@ -63,18 +63,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var OrderPage = /** @class */ (function () {
-    function OrderPage(navCtrl, navParams) {
+    function OrderPage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+        this.name = "xxxx";
+        this.name2 = "wwww";
     }
     OrderPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad OrderPage');
     };
+    OrderPage.prototype.order = function (item) {
+        var prompt = this.alertCtrl.create({
+            title: 'สั่งสินค้า',
+            message: item,
+            inputs: [
+                {
+                    name: 'title',
+                    placeholder: 'จำนวนสินค้า'
+                },
+            ],
+            buttons: [
+                {
+                    text: 'ยกเลิก',
+                    handler: function (data) {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'สั่งสินค้า',
+                    handler: function (data) {
+                        console.log('Saved clicked');
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    };
     OrderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-order',template:/*ion-inline-start:"F:\workthes\demoAgent\src\pages\order\order.html"*/'<!--\n\n  Generated template for the OrderPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>order</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <h2>สั่งซื้อสินค้า</h2>\n\n  <ion-item>\n\n    <ion-label floating>ชื่อลูกค้า</ion-label>\n\n    <ion-input type="text"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>เบอร์โทรลูกค้า</ion-label>\n\n    <ion-input type="text"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n      <ion-label floating>ที่อยู่ลูกค้า</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>จำนวนสินค้า</ion-label>\n\n    <ion-input type="number"></ion-input>\n\n  </ion-item>\n\n  <br><br>\n\n  <button ion-button block round>Done</button>\n\n\n\n</ion-content>'/*ion-inline-end:"F:\workthes\demoAgent\src\pages\order\order.html"*/,
+            selector: 'page-order',template:/*ion-inline-start:"D:\demoAgent\src\pages\order\order.html"*/'<!--\n\n  Generated template for the OrderPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>order</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <h2>สั่งซื้อสินค้า</h2>\n\n  <ion-card [(ngModel)]="name" (click)="order(name)">\n\n     <img width="20%" src="../../assets/imgs/lip_tint_matte.jpg">\n\n  </ion-card>\n\n  <ion-card [(ngModel)]="name2" (click)="order(name2)">\n\n      <img width="20%" src="../../assets/imgs/cream.jpg">\n\n   </ion-card>\n\n</ion-content>'/*ion-inline-end:"D:\demoAgent\src\pages\order\order.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], OrderPage);
     return OrderPage;
 }());
