@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 271:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(280);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var RegisterPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 276:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,12 +75,11 @@ var RegisterPage = /** @class */ (function () {
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"D:\Work\demoAgent\src\pages\register\register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n  <h2>สมัครสมาชิก</h2>\n  <ion-item>\n    <ion-label floating>ชื่อ</ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>เบอร์โทร</ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>ที่อยู่</ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label floating>รหัสตัวแทน</ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n  <br>\n  <button ion-button round block color="secondary" (click)="regis()">Done</button>\n\n</ion-content>'/*ion-inline-end:"D:\Work\demoAgent\src\pages\register\register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"F:\workthes\demoAgent\src\pages\register\register.html"*/'<!--\n\n  Generated template for the RegisterPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>register</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <h2>สมัครสมาชิก</h2>\n\n  <ion-item>\n\n    <ion-label floating>ชื่อ</ion-label>\n\n    <ion-input type="text"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>เบอร์โทร</ion-label>\n\n    <ion-input type="text"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>ที่อยู่</ion-label>\n\n    <ion-input type="text"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label floating>รหัสตัวแทน</ion-label>\n\n    <ion-input type="text"></ion-input>\n\n  </ion-item>\n\n  <br>\n\n  <button ion-button round block color="secondary" (click)="regis()">Done</button>\n\n\n\n</ion-content>'/*ion-inline-end:"F:\workthes\demoAgent\src\pages\register\register.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], RegisterPage);
     return RegisterPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=register.js.map

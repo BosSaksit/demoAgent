@@ -10,5 +10,16 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
+  toList(){
+    this.navCtrl.push('ListPage');
+  }
+
+  toSale(){
+    this.navCtrl.push('SalePage');
+  }
+
+  toOrder(){
+    this.navCtrl.push('OrderPage');
+  }
 
 }
