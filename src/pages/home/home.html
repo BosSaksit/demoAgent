@@ -12,7 +12,35 @@
 </ion-header>
 
 <ion-content padding text-center>
-  <br>
+  <ion-row>
+    <ion-col>
+      ชื่อ
+    </ion-col>
+    <ion-col>
+      เบอร์
+    </ion-col>
+    <ion-col>
+      ที่อยู่
+    </ion-col>
+    <ion-col>
+      เลขปชช
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let x of getuser">
+      <ion-col>
+        {{ x.name }}
+      </ion-col>
+      <ion-col>
+          {{ x.tel }}
+      </ion-col>
+      <ion-col>
+          {{ x.address }}
+      </ion-col>
+      <ion-col>
+          {{ x.idcard }}
+      </ion-col>
+    </ion-row>
+  <!-- <br>
   <img width="50%" src="../../assets/imgs/timeline_20170529_225846.jpg">
   <br>
   <ion-label>จำนวนที่ขายทั้งหมด :</ion-label>
@@ -21,5 +49,5 @@
     <button ion-button full round (click)="toList()">List</button>
     <button ion-button full round (click)="toOrder()">Order</button>
     <button ion-button full round (click)="toSale()">Sales</button>
-  </ion-list>
+  </ion-list> -->
 </ion-content>

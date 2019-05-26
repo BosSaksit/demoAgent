@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { user } from '../../models/user';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { CallapiProvider } from '../../providers/callapi/callapi';
+import { Validators } from '@angular/forms';
 
 /**
  * Generated class for the RegisterPage page.
@@ -14,15 +18,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+  dataUser:FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder, public callapi:CallapiProvider) {
+    this.dataUser = this.fb.group({
+      'name':[null,Validators.required],
+      'tel':[null,Validators.required],
+      'address':[null,Validators.required],
+      'idcard':[null,Validators.required]
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
   regis(){
-    this.navCtrl.pop();
+    console.log(this.dataUser.value);
+    
+    // this.navCtrl.pop();
   }
 
 }

@@ -11,24 +11,32 @@
 </ion-header>
 
 <ion-content padding text-center>
+  <form [formGroup]="dataUser" (ngSubmit)="regis()"></form>
+
   <h2>สมัครสมาชิก</h2>
+  
   <ion-item>
     <ion-label floating>ชื่อ</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input formControlName="name"></ion-input>
   </ion-item>
+
   <ion-item>
     <ion-label floating>เบอร์โทร</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input formControlName="tel"></ion-input>
   </ion-item>
+
   <ion-item>
     <ion-label floating>ที่อยู่</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input formControlName="address"></ion-input>
   </ion-item>
+
   <ion-item>
     <ion-label floating>รหัสบัตรประจำตัวประชาชน</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input formControlName="idcard"></ion-input>
   </ion-item>
-  <br>
-  <button ion-button round block color="secondary" (click)="regis()">Done</button>
+
+  <button ion-button round block color="secondary" type="submit">Done</button>
+
+</form>
 
 </ion-content>

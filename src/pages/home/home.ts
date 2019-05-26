@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { CallapiProvider } from '../../providers/callapi/callapi';
+import { user } from '../../models/user';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +9,10 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  public getuser:user;
 
+  constructor(public navCtrl: NavController, public callapi:CallapiProvider) {
+  
   }
   toList(){
     this.navCtrl.push('ListPage');
@@ -20,6 +24,14 @@ export class HomePage {
 
   toOrder(){
     this.navCtrl.push('OrderPage');
+  }
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter');
+    this.callapi.getUserAll().subscribe((it) =>{
+      console.log(it);
+      this.getuser = it;
+      console.log(this.getuser);   
+    });
   }
 
 }
