@@ -11,14 +11,18 @@ import { user } from '../../models/user';
 @Injectable()
 export class CallapiProvider {
 
-  public static host:string = "https://localhost:5001/api/";
+  public static host: string = "https://localhost:5001/api/";
 
   constructor(public http: HttpClient) {
     console.log('Hello CallapiProvider Provider');
   }
 
-  public getUserAll(){
+  public getUserAll() {
     return this.http.get<user>(CallapiProvider.host + 'User/GetAll');
+  }
+  public addUser(data) {
+    console.log(data);
+    return this.http.post<user>(CallapiProvider.host + 'User/AddUser', data );
   }
 
 }

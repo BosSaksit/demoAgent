@@ -74,6 +74,7 @@ var RegisterPage = /** @class */ (function () {
         this.fb = fb;
         this.callapi = callapi;
         this.dataUser = this.fb.group({
+            'id': [null],
             'name': [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
             'tel': [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
             'address': [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
@@ -84,12 +85,26 @@ var RegisterPage = /** @class */ (function () {
         console.log('ionViewDidLoad RegisterPage');
     };
     RegisterPage.prototype.regis = function () {
+        var _this = this;
+        this.submitRequested = true;
         console.log(this.dataUser.value);
+        this.data = this.dataUser.value;
+        this.callapi.addUser(this.data).subscribe(function (data) {
+            data.name = _this.data.name,
+                data.address = _this.data.address,
+                data.idcard = _this.data.idcard,
+                data.tel = _this.data.tel;
+            console.log(data);
+        });
         // this.navCtrl.pop();
+    };
+    RegisterPage.prototype.isValid = function (name) {
+        var ctrl = this.dataUser.get(name);
+        return ctrl.invalid && (ctrl.dirty || this.submitRequested);
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"D:\demoAgent\src\pages\register\register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n  <form [formGroup]="dataUser" (ngSubmit)="regis()"></form>\n\n  <h2>สมัครสมาชิก</h2>\n  \n  <ion-item>\n    <ion-label floating>ชื่อ</ion-label>\n    <ion-input formControlName="name"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>เบอร์โทร</ion-label>\n    <ion-input formControlName="tel"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>ที่อยู่</ion-label>\n    <ion-input formControlName="address"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>รหัสบัตรประจำตัวประชาชน</ion-label>\n    <ion-input formControlName="idcard"></ion-input>\n  </ion-item>\n\n  <button ion-button round block color="secondary" type="submit">Done</button>\n\n</form>\n\n</ion-content>'/*ion-inline-end:"D:\demoAgent\src\pages\register\register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"F:\workthes\demoAgent\src\pages\register\register.html"*/'<!--\n\n  Generated template for the RegisterPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>register</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n\n\n  <form [formGroup]="dataUser" (ngSubmit)="regis()">\n\n\n\n  <h2>สมัครสมาชิก</h2>\n\n  \n\n  <ion-item>\n\n    <ion-label floating>ชื่อ</ion-label>\n\n    <ion-input formControlName="name" [class.invalid]="isValid(\'name\')"></ion-input>\n\n  </ion-item>\n\n  <ion-item *ngIf="isValid(\'name\')">\n\n      <span class="invalid-msg">\n\n        กรุณากรอกข้อมูล\n\n      </span>\n\n    </ion-item>\n\n\n\n  <ion-item>\n\n    <ion-label floating>เบอร์โทร</ion-label>\n\n    <ion-input formControlName="tel" [class.invalid]="isValid(\'tel\')"></ion-input>\n\n  </ion-item>\n\n  <ion-item *ngIf="isValid(\'tel\')">\n\n      <span class="invalid-msg">\n\n        กรุณากรอกข้อมูล\n\n      </span>\n\n    </ion-item>\n\n\n\n  <ion-item>\n\n    <ion-label floating>ที่อยู่</ion-label>\n\n    <ion-input formControlName="address" [class.invalid]="isValid(\'address\')"></ion-input>\n\n  </ion-item>\n\n  <ion-item *ngIf="isValid(\'address\')">\n\n      <span class="invalid-msg">\n\n        กรุณากรอกข้อมูล\n\n      </span>\n\n    </ion-item>\n\n\n\n  <ion-item>\n\n    <ion-label floating>รหัสบัตรประจำตัวประชาชน</ion-label>\n\n    <ion-input formControlName="idcard" [class.invalid]="isValid(\'idcard\')"></ion-input>\n\n  </ion-item>\n\n  <ion-item *ngIf="isValid(\'idcard\')">\n\n      <span class="invalid-msg">\n\n        กรุณากรอกข้อมูล\n\n      </span>\n\n    </ion-item>\n\n\n\n  <button ion-button round block color="secondary" type="submit">Done</button>\n\n\n\n</form>\n\n\n\n</ion-content>'/*ion-inline-end:"F:\workthes\demoAgent\src\pages\register\register.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_callapi_callapi__["a" /* CallapiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_callapi_callapi__["a" /* CallapiProvider */]) === "function" && _d || Object])
     ], RegisterPage);

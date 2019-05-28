@@ -18,24 +18,41 @@ import { Validators } from '@angular/forms';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  dataUser:FormGroup;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder, public callapi:CallapiProvider) {
+  dataUser: FormGroup;
+  private submitRequested: boolean;
+  data: user;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder, public callapi: CallapiProvider) {
     this.dataUser = this.fb.group({
-      'name':[null,Validators.required],
-      'tel':[null,Validators.required],
-      'address':[null,Validators.required],
-      'idcard':[null,Validators.required]
+      'id': [null],
+      'name': [null, Validators.required],
+      'tel': [null, Validators.required],
+      'address': [null, Validators.required],
+      'idcard': [null, Validators.required]
     });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
-  regis(){
+  regis() {
+    this.submitRequested = true;
     console.log(this.dataUser.value);
-    
+    this.data = this.dataUser.value;
+    this.callapi.addUser(this.data).subscribe(data => {
+      data.name = this.data.name,
+      data.address = this.data.address,
+      data.idcard = this.data.idcard,
+      data.tel = this.data.tel
+
+      console.log(data);
+
+    });
     // this.navCtrl.pop();
+  }
+
+  public isValid(name: string): boolean {
+    var ctrl = this.dataUser.get(name);
+    return ctrl.invalid && (ctrl.dirty || this.submitRequested);
   }
 
 }

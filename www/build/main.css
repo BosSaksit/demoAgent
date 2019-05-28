@@ -27993,3 +27993,11 @@ ion-navbar.toolbar {
 .colorcontent {
   background-color: #f6c7fa;
 }
+
+.invalid {
+  border: 1px solid red;
+}
+
+.invalid-msg {
+  color: red;
+}

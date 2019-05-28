@@ -34,11 +34,11 @@ var map = {
 		4
 	],
 	"../pages/login/login.module": [
-		279,
+		278,
 		3
 	],
 	"../pages/order/order.module": [
-		278,
+		279,
 		2
 	],
 	"../pages/register/register.module": [
@@ -111,7 +111,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\demoAgent\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      หน้าหลัก\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only>\n\n        <ion-icon name="md-person"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <ion-row>\n\n    <ion-col>\n\n      ชื่อ\n\n    </ion-col>\n\n    <ion-col>\n\n      เบอร์\n\n    </ion-col>\n\n    <ion-col>\n\n      ที่อยู่\n\n    </ion-col>\n\n    <ion-col>\n\n      เลขปชช\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row *ngFor="let x of getuser">\n\n      <ion-col>\n\n        {{ x.name }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.tel }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.address }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.idcard }}\n\n      </ion-col>\n\n    </ion-row>\n\n  <!-- <br>\n\n  <img width="50%" src="../../assets/imgs/timeline_20170529_225846.jpg">\n\n  <br>\n\n  <ion-label>จำนวนที่ขายทั้งหมด :</ion-label>\n\n  <ion-label>ยอดที่ขายทั้งหมด :</ion-label>\n\n  <ion-list>\n\n    <button ion-button full round (click)="toList()">List</button>\n\n    <button ion-button full round (click)="toOrder()">Order</button>\n\n    <button ion-button full round (click)="toSale()">Sales</button>\n\n  </ion-list> -->\n\n</ion-content>'/*ion-inline-end:"D:\demoAgent\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"F:\workthes\demoAgent\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      หน้าหลัก\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only>\n\n        <ion-icon name="md-person"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <ion-row>\n\n    <ion-col>\n\n      ชื่อ\n\n    </ion-col>\n\n    <ion-col>\n\n      เบอร์\n\n    </ion-col>\n\n    <ion-col>\n\n      ที่อยู่\n\n    </ion-col>\n\n    <ion-col>\n\n      เลขปชช\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row *ngFor="let x of getuser">\n\n      <ion-col>\n\n        {{ x.name }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.tel }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.address }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.idcard }}\n\n      </ion-col>\n\n    </ion-row>\n\n  <!-- <br>\n\n  <img width="50%" src="../../assets/imgs/timeline_20170529_225846.jpg">\n\n  <br>\n\n  <ion-label>จำนวนที่ขายทั้งหมด :</ion-label>\n\n  <ion-label>ยอดที่ขายทั้งหมด :</ion-label>\n\n  <ion-list>\n\n    <button ion-button full round (click)="toList()">List</button>\n\n    <button ion-button full round (click)="toOrder()">Order</button>\n\n    <button ion-button full round (click)="toSale()">Sales</button>\n\n  </ion-list> -->\n\n</ion-content>'/*ion-inline-end:"F:\workthes\demoAgent\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_callapi_callapi__["a" /* CallapiProvider */]])
     ], HomePage);
@@ -182,8 +182,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/info-list/info-list.module#InfoListPageModule', name: 'InfoListPage', segment: 'info-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/info/info.module#InfoPageModule', name: 'InfoPage', segment: 'info', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list/list.module#ListPageModule', name: 'ListPage', segment: 'list', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/order/order.module#OrderPageModule', name: 'OrderPage', segment: 'order', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/order/order.module#OrderPageModule', name: 'OrderPage', segment: 'order', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sale/sale.module#SalePageModule', name: 'SalePage', segment: 'sale', priority: 'low', defaultHistory: [] }
                     ]
@@ -242,7 +242,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\demoAgent\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\demoAgent\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\workthes\demoAgent\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\workthes\demoAgent\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -286,13 +286,17 @@ var CallapiProvider = /** @class */ (function () {
     CallapiProvider.prototype.getUserAll = function () {
         return this.http.get(CallapiProvider_1.host + 'User/GetAll');
     };
+    CallapiProvider.prototype.addUser = function (data) {
+        console.log(data);
+        return this.http.post(CallapiProvider_1.host + 'User/AddUser', data);
+    };
     CallapiProvider.host = "https://localhost:5001/api/";
     CallapiProvider = CallapiProvider_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], CallapiProvider);
     return CallapiProvider;
-    var CallapiProvider_1;
+    var CallapiProvider_1, _a;
 }());
 
 //# sourceMappingURL=callapi.js.map
