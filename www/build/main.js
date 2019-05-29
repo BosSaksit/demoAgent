@@ -290,6 +290,9 @@ var CallapiProvider = /** @class */ (function () {
         console.log(data);
         return this.http.post(CallapiProvider_1.host + 'User/AddUser', data);
     };
+    CallapiProvider.prototype.editUser = function (userId, data) {
+        return this.http.put(CallapiProvider_1.host + 'User/EditUser/' + userId, data);
+    };
     CallapiProvider.host = "https://localhost:5001/api/";
     CallapiProvider = CallapiProvider_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),

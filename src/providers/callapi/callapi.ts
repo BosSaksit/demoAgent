@@ -24,5 +24,8 @@ export class CallapiProvider {
     console.log(data);
     return this.http.post<user>(CallapiProvider.host + 'User/AddUser', data );
   }
+  public editUser(userId: string, data){
+    return this.http.put<user>(CallapiProvider.host + 'User/EditUser/' + userId, data);
+  }
 
 }
