@@ -18,8 +18,9 @@ export class HomePage {
     this.navCtrl.push('ListPage');
   }
 
-  toSale(){
-    this.navCtrl.push('SalePage');
+  toSale(id:string){
+    console.log(id);
+    this.navCtrl.push('SalePage',{_id:id});
   }
 
   toOrder(){

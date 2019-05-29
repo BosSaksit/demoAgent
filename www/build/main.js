@@ -94,8 +94,9 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.toList = function () {
         this.navCtrl.push('ListPage');
     };
-    HomePage.prototype.toSale = function () {
-        this.navCtrl.push('SalePage');
+    HomePage.prototype.toSale = function (id) {
+        console.log(id);
+        this.navCtrl.push('SalePage', { _id: id });
     };
     HomePage.prototype.toOrder = function () {
         this.navCtrl.push('OrderPage');
@@ -111,11 +112,12 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"F:\workthes\demoAgent\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      หน้าหลัก\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only>\n\n        <ion-icon name="md-person"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <ion-row>\n\n    <ion-col>\n\n      ชื่อ\n\n    </ion-col>\n\n    <ion-col>\n\n      เบอร์\n\n    </ion-col>\n\n    <ion-col>\n\n      ที่อยู่\n\n    </ion-col>\n\n    <ion-col>\n\n      เลขปชช\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row *ngFor="let x of getuser">\n\n      <ion-col>\n\n        {{ x.name }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.tel }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.address }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.idcard }}\n\n      </ion-col>\n\n    </ion-row>\n\n  <!-- <br>\n\n  <img width="50%" src="../../assets/imgs/timeline_20170529_225846.jpg">\n\n  <br>\n\n  <ion-label>จำนวนที่ขายทั้งหมด :</ion-label>\n\n  <ion-label>ยอดที่ขายทั้งหมด :</ion-label>\n\n  <ion-list>\n\n    <button ion-button full round (click)="toList()">List</button>\n\n    <button ion-button full round (click)="toOrder()">Order</button>\n\n    <button ion-button full round (click)="toSale()">Sales</button>\n\n  </ion-list> -->\n\n</ion-content>'/*ion-inline-end:"F:\workthes\demoAgent\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"D:\demoAgent\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      หน้าหลัก\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only>\n\n        <ion-icon name="md-person"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding text-center>\n\n  <ion-row>\n\n    <ion-col>\n\n      ชื่อ\n\n    </ion-col>\n\n    <ion-col>\n\n      เบอร์\n\n    </ion-col>\n\n    <ion-col>\n\n      แก้ไข\n\n    </ion-col>\n\n    <ion-col>\n\n      ลบ\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row *ngFor="let x of getuser">\n\n      <ion-col>\n\n        {{ x.name }}\n\n      </ion-col>\n\n      <ion-col>\n\n          {{ x.tel }}\n\n      </ion-col>\n\n      <ion-col>\n\n          <button only-icon ion-button small (click)="toSale(x.id)">\n\n            <ion-icon name="md-create"></ion-icon>\n\n          </button>\n\n      </ion-col>\n\n      <ion-col>\n\n        <button only-icon ion-button small color="danger">\n\n          <ion-icon name="md-trash"></ion-icon>\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n  <!-- <br>\n\n  <img width="50%" src="../../assets/imgs/timeline_20170529_225846.jpg">\n\n  <br>\n\n  <ion-label>จำนวนที่ขายทั้งหมด :</ion-label>\n\n  <ion-label>ยอดที่ขายทั้งหมด :</ion-label>\n\n  <ion-list>\n\n    <button ion-button full round (click)="toList()">List</button>\n\n    <button ion-button full round (click)="toOrder()">Order</button>\n\n    <button ion-button full round (click)="toSale()">Sales</button>\n\n  </ion-list> -->\n\n</ion-content>'/*ion-inline-end:"D:\demoAgent\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_callapi_callapi__["a" /* CallapiProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_callapi_callapi__["a" /* CallapiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_callapi_callapi__["a" /* CallapiProvider */]) === "function" && _b || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -242,7 +244,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\workthes\demoAgent\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\workthes\demoAgent\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\demoAgent\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\demoAgent\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -292,6 +294,9 @@ var CallapiProvider = /** @class */ (function () {
     };
     CallapiProvider.prototype.editUser = function (userId, data) {
         return this.http.put(CallapiProvider_1.host + 'User/EditUser/' + userId, data);
+    };
+    CallapiProvider.prototype.getUserById = function (userId) {
+        return this.http.get(CallapiProvider_1.host + 'User/GetbyId/' + userId);
     };
     CallapiProvider.host = "https://localhost:5001/api/";
     CallapiProvider = CallapiProvider_1 = __decorate([

@@ -11,5 +11,24 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+  <ion-item>
+    <ion-label floating>ชื่อ</ion-label>
+    <ion-input type="text">{{ name }}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>เบอร์โทร</ion-label>
+    <ion-input type="text">{{ tel }}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>ที่อยู่</ion-label>
+    <ion-input type="text">{{ address }}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>รหัสบัตรประจำตัวประชาชน</ion-label>
+    <ion-input type="text">{{ idcard }}</ion-input>
+  </ion-item>
+</ion-list>
+  <button ion-button round block color="secondary" type="submit">Done</button>
 
 </ion-content>

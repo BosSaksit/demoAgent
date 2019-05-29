@@ -27,5 +27,8 @@ export class CallapiProvider {
   public editUser(userId: string, data){
     return this.http.put<user>(CallapiProvider.host + 'User/EditUser/' + userId, data);
   }
+  public getUserById(userId: string){
+    return this.http.get<user>(CallapiProvider.host + 'User/GetbyId/'+ userId);
+  }
 
 }
