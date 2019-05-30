@@ -47,7 +47,7 @@ export class RegisterPage {
       console.log(data);
 
     });
-    // this.navCtrl.pop();
+    this.navCtrl.pop();
   }
 
   public isValid(name: string): boolean {

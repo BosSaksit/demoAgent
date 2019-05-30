@@ -30,5 +30,8 @@ export class CallapiProvider {
   public getUserById(userId: string){
     return this.http.get<user>(CallapiProvider.host + 'User/GetbyId/'+ userId);
   }
+  public deleteUser(userId:string){
+    return this.http.delete<user>(CallapiProvider.host + 'User/DeleteUser/'+ userId);
+  }
 
 }

@@ -11,24 +11,52 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-  <ion-item>
-    <ion-label floating>ชื่อ</ion-label>
-    <ion-input type="text">{{ name }}</ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>เบอร์โทร</ion-label>
-    <ion-input type="text">{{ tel }}</ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>ที่อยู่</ion-label>
-    <ion-input type="text">{{ address }}</ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>รหัสบัตรประจำตัวประชาชน</ion-label>
-    <ion-input type="text">{{ idcard }}</ion-input>
-  </ion-item>
-</ion-list>
-  <button ion-button round block color="secondary" type="submit">Done</button>
+  <form [formGroup]="userData" (ngSubmit)="editdata()">
+
+    <h2>แก้ไขข้อมูล</h2>
+    
+    <ion-item>
+      <ion-label floating>ชื่อ</ion-label>
+      <ion-input formControlName="name" [class.invalid]="isValid('name')"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="isValid('name')">
+        <span class="invalid-msg">
+          กรุณากรอกข้อมูล
+        </span>
+      </ion-item>
+  
+    <ion-item>
+      <ion-label floating>เบอร์โทร</ion-label>
+      <ion-input formControlName="tel" [class.invalid]="isValid('tel')"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="isValid('tel')">
+        <span class="invalid-msg">
+          กรุณากรอกข้อมูล
+        </span>
+      </ion-item>
+  
+    <ion-item>
+      <ion-label floating>ที่อยู่</ion-label>
+      <ion-input formControlName="address" [class.invalid]="isValid('address')"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="isValid('address')">
+        <span class="invalid-msg">
+          กรุณากรอกข้อมูล
+        </span>
+      </ion-item>
+  
+    <ion-item>
+      <ion-label floating>รหัสบัตรประจำตัวประชาชน</ion-label>
+      <ion-input formControlName="idcard" [class.invalid]="isValid('idcard')"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="isValid('idcard')">
+        <span class="invalid-msg">
+          กรุณากรอกข้อมูล
+        </span>
+      </ion-item>
+  
+    <button ion-button round block color="secondary" type="submit">Done</button>
+  
+  </form>
 
 </ion-content>

@@ -42,7 +42,7 @@ export class LoginPage {
 
   login(){
    this.loadingPage();
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.push(HomePage);
   }
 
 }

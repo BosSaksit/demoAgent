@@ -9,29 +9,38 @@ import { user } from '../../models/user';
 })
 export class HomePage {
 
-  public getuser:user;
+  public getuser: user;
 
-  constructor(public navCtrl: NavController, public callapi:CallapiProvider) {
-  
+  constructor(public navCtrl: NavController, public callapi: CallapiProvider) {
+
   }
-  toList(){
+  public toList() {
     this.navCtrl.push('ListPage');
   }
 
-  toSale(id:string){
+  public toSale(id: string) {
     console.log(id);
-    this.navCtrl.push('SalePage',{_id:id});
+    this.navCtrl.push('SalePage', { _id: id });
+  }
+  public delete(id: string) {
+    this.callapi.deleteUser(id).subscribe(it => {
+      console.log("delete success");
+    });
+    this.getAllUser();
   }
 
-  toOrder(){
+  public toOrder() {
     this.navCtrl.push('OrderPage');
   }
   ionViewDidEnter() {
     console.log('ionViewDidEnter');
-    this.callapi.getUserAll().subscribe((it) =>{
+    this.getAllUser();
+  }
+  public getAllUser() {
+    this.callapi.getUserAll().subscribe((it) => {
       console.log(it);
       this.getuser = it;
-      console.log(this.getuser);   
+      console.log(this.getuser);
     });
   }
 
